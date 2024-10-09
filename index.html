@@ -1,142 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!--Css-->
- <link rel="stylesheet" href="estilos/estilos.css">
- <link rel="stylesheet" href="estilos/main.css">
- <link rel="stylesheet" href="estilos/vendor.css">
- <link rel="stylesheet" href="estilos/font-awesome/css/fontawesome-all.css">
-  <!--Java Script-------------------------------------------------------------------->
-<script src="js/moderniz.js"></script>
-<script src="js/pace.min.js"></script>
- <!--favicon-icono de la pestaña  ==================================================================-->
- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
- <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <title>portafolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--CSS-->
+  <link rel="stylesheet" href="estilos/base.css">
+  <link rel="stylesheet" href="estilos/main.css">
+  <link rel="stylesheet" href="estilos/vendor.css">
+  <link rel="stylesheet" href="estilos/font-awesome/css/fontawesome-all.css">
+  <!--JavaScript
+    ===================================================-->
+  <script src="js/modernizr.js"></script>
+  <script src="js/pace.min.js"></script>
+
+  <!--Favicon - icono de la pestaña
+    ===================================================-->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_portafolio_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_protafolio16x16.png">
+  <title>Portafolio</title>
 </head>
 
 <body id="top">
-     <!--vista de carga o loading-->
-<div id="preloader">
+  <!--vista de carga o loading-->
+  <div id="preloader">
     <div id="loader"></div>
-
-
-</div>
-<!--empezamos con el header==================================================================-->
-<header class="s-header">
+  </div>
+  <!--Empeazados con el header
+    ====================================================-->
+  <header class="s-header">
     <div class="header-logo">
-        <a href="index.html" class="site-logo"></a>
-    <img src="img/logo.svg" alt="homepage">
+      <a href="index.html" class="site-logo">
+        <img src="img/logo.svg" alt="Homepage">
+      </a>
     </div>
-         <!--barrra de vanegacion==================================================================-->
-<nav class="header-nav-wrap">
-    <ul class="header-main-nav">
-    <li class="current"><a href="#intro" class="smoothscroll" title="intro">Introduccion</a></li>
-    <li><a href="#about" title="about" class="smoothscroll">About</a></li>
-    <li><a href="#services" title="services" class="smoothscroll">Services</a></li>
-    <li><a href="#works" title="works" class="smoothscroll">Works</a></li>
-    <li><a href="#contact" title="contact us" class="smoothscroll">Contact</a></li>
-</ul>
-<!--Creamos una lista desordenada para las redes sociales======================================================-->
-<ul class="header-social">
-<li><a href="#0"><i class="fab fa-facebook" aria-hidden="true" ></i></a></li>
-<li><a href="#1"><i class="fab fa-twitter" aria-hidden="true" ></i></a></li>
-<li><a href="#2"><i class="fab fa-youtube" aria-hidden="true" ></i></a></li>
-<li><a href="#3"><i class="fab fa-instagram" aria-hidden="true" ></i></a></li>
-</ul>
-</nav>
-<a href="#" class="header-menu-toggle"><span>Menu</span></a>
-</header><!--Fin del header=========================================================================-->
-<!--
-introduccion-->
-<section id="intro" class="s-intro target-section">
-   <div class="row intro-content">
-    <div class="column large-9 mob-full intro-text">
-        <h3>Hola soy edi , jujutsu , david uwu</h3>
+    <!--Barra de Navegación 
+        =================================================-->
+    <nav class="header-nav-wrap">
+      <ul class="header-main-nav">
+        <li class="current"><a href="#intro" class="smoothscroll" title="intro">Introducción</a></li>
+        <li><a href="#about" title="about" class="smoothscroll">About</a></li>
+        <li><a href="#services" title="services" class="smoothscroll">Services</a></li>
+        <li><a href="#works" title="works" class="smoothscroll">Works</a></li>
+        <li><a href="#contact" title="contact us" class="smoothscroll">Contact</a></li>
+      </ul>
+
+      <!--Creamos una lista desordenada para las redes sociales
+            ======================================-->
+      <ul class="header-social">
+        <li><a href="#0"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#1"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#2"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+        <li><a href="#3"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+      </ul>
+    </nav>
+    <a href="#" class="header-menu-toggle"><span>Menu</span></a>
+  </header><!--fin del header-->
+
+  <!--INtroduccion
+    ===============================================-->
+  <section id="intro" class="s-intro target-section">
+    <div class="row intro-content">
+      <div class="column large-9 mob-full intro-text">
+        <h3>Hola, Mi nombre es Alexis Arcos</h3>
         <h1>
-            Desarrollador Web<br>
-            Desarrollador Movil<br>
-            experto en IA<br>
+          Desarrollador Web <br>
+          Desarrolladores Móviles <br>
+          Expertos en IA
         </h1>
-    </div>
-    <div class="intro-scroll">
-<a href="#about" class="intro-scroll-link smoothscroll">
-    presiona para más
-</a>
-</div>
-   </div>
-   <div class="row intro-content">
-   <div class="intro-grid"></div>
-   <div class="intro-pic"></div>
-
- </div> <!--end row-->
-</section> <!--end intro-->
-<!--About
-section#about.s-about pro tip para visual-->
-<!--Esta es la cabeza del Div-->
-<section id="about" class="s-about target-section">
-  <div class="about-me">
-    <div class="row heading-block" data-aos="fade-up" >
-      <div class="colum large-full">
-        <h2 class="section-heading"> About me </h2>
       </div>
-    </div>
-  <!--Este es el cuerpo del section -->
-    <div class="row aboutme-me__content">
-      <div class="column large-full about-me__text">
-      <p class="lead">
-      Edison
-      </p>
-      <p>
-      Estudios Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Un párrafo es un conjunto de oraciones articuladas entre sí temáticamente. Esta articulación está
-        dada por relaciones lógicas que dan una unidad de sentido al párrafo. Ahora bien, los párrafos que
-        componen un texto pueden ser de distintos tipos.
-      </p>
-    </div>
-  </div>
-  <div class="row about-me__buttons">
-    <div class="column large-half tab-full">
-     <a href="#" class="btn btn--stroke full-width">Hire me</a>
-</div>
-<div class="column large-half tab-full">
-   <a href="#" class="btn btn--primary full-width">Download CV</div></a>
-</div>
-</div>
-</div>
-<div class="about-experience">
-  <div class="row heading-block">
-    <div class="column large-full">
-      <h2 class="section-heading"> Work & Education</h2>
-    </div>
-  </div>
+      <div class="intro-scroll">
+        <a href="#about" class="intro-scroll-link smoothscroll">
+          Presiona para más
+        </a>
 
-<div class="row about-experience-timeline">
-  <div class="column large-half tab-full">
-    <div class="timeline">
-      <div class="timeline_icon-wrap">
-<!--spN PERMITE PONER IMAGEN O INFO NO TAN RELEVANTE DENTRO DE MI PAGINA WEB-->
-        <span class="timeline_icon timeline_icon--work"></span>
-<div class="timeline__block">
-
-
-</div>
       </div>
+      <div class="intro-grid"></div>
+      <div class="intro-pic"></div>
 
-    </div>
+    </div><!--end row-->
+  </section><!--end intro-->
 
-  </div>
+  <!--about
+    ==========================================================-->
+  <!--acerca de mi persona informacion principal en el apartado de a que me dedico como soy y que me gusta hacer-->
+  <section id="about" class="s-about target-section">
+    <div class="about-me">
+      <div class="row heading-block">
+        <div class="column large-full">
+          <h2 class="section-heading">About me</h2>
+        </div>
+      </div>
+      <div class="row about-me__content">
+        <div class="column large-full about-me__text">
+          <p class="lead">
+            Alexis Xavier Arcos Gutierrez es una persona
+            responsable, metódica y aplicada a
+            los
+            procesos repetitivos, le encanta
+            organizar, aprender, entender y
+            comprender el entorno donde se
+            desenvuelve, posee la habilidad de
+            mutar sus capacidades según la
+            necesidad del lugar, y disfruta mucho de los momentos
+            que nos hacen personas.
 
-</div>
-</div>
-</section>
+          </p>
+
+          <p>
+            Además, Alexis se graduó en la Academia Aeronautica Mayor Pedro Traversari en
+            bachillerato tecnico en el apartado de TICS INFORMATICA quizas no con
+            uno de los promedios mas destacados pero aprendio mucho en el camino
+            esto refleja que clase de persona es, alguien que disfruta del proceso y piensa
+            que las notas no lo son todo para triunfar en el mundo laboral.
+
+          </p>
+          <p>Actualmente, Alexis Xavier Arcos Gutierrez es estudiante en el Instituto Superior Tecnológico Quito,
+            donde cada dia se esfuerza mas por llegar a ser un gran programador
+            en la Carrera de Desarrollo de Software.
+            Su posición como estudiante indica una dedicación al campo de aprender
+            de sus superiores y absorber todo el conocimiento
+            que nos puedan impartir los licenciados que se esfuerzan
+            por la enseñanza de nosotros.</p>
+          <p>Adicionalmente, es relevante mencionar que Alexis
+            está próximo a sacar el titulo de tecnologo en el desarrollo de software
+            en el instituto tecnologico quito.
+            este detalle habla de su interes en profundizar aprender mucho mas acerca
+            de la informatica y lo que puede llegar a haber en el futuro en cuanto a los campos
+            de la programacion.</p>
+
+        </div>
+
+      </div>
+      <div class="row about-me__buttons">
+        <div class="column large-half tab-full">
+          <a href="#" class="btn btn--stroke full-width">Hire Me</a>
+        </div>
+        <div class="column large-half tab-full">
+          <a href="#" class="btn btn--primary full-width">Dowload CV</a>
+        </div>
+      </div>
+    </div><!--End about me -->
+    <!--final del sobre mi y las cosas mas importantes acerca de mi persona -->
+
+    <div class="about-experience"> <!--work y education -->
+      <div class="row heading-block">
+        <!--inicio del apartado que va a hablar acerca de mi trabajo o de la educacion que recibo como estudiante -->
+        <div class="column large-full">
+          <h2 class="section-heading">Work & Education</h2>
+        </div>
+      </div>
+      <div class="row about-experience__timeline">
+        <div class="column large-half tab-full">
+          <div class="timeline">
+            <div class="timeline_icon-wrap">
+              <span class="timeline_icon timeline_icon--work"></span>
+            </div>
+            <!--apartado que habla acerca de que me encuentro estudiando actualmente y en que lugar estoy estudiando -->
+            <div class="timeline__block">
+              <div class="timeline__bullet"></div>
+              <div class="timeline__header">
+                <p class="timeline__timeframe">February 2020 - Present</p>
+                <h3 class="item-title">Instituto Tecnológico Quito</h3>
+                <h5>Student</h5>
+              </div>
+              <div class="timeline__desc">
+                <p>Alexis Arcos es un estudiante del ITQ que entro a principios del 2024 por que le llamo la
+                  atencion sus instalaciones, su forma de trabajar, y como algunos compañerso de el salieron de este
+                  instituto
+                  siendo unos profesionales se compromete a salir del ITQ cuando ya consiga el titulo de tecnologo en
+                  desarrollo de software
+                  y asi poder dedicarse a la programacion en su futura vida laboral.</p>
+              </div>
+            </div>
+            <!--apartado que habla acerca de donde tuve mis pasantias para poderme graduar en el colegio de tics informatica -->
+
+            <div class="timeline__block">
+              <div class="timeline__bullet">
+                <div class="timeline__header">
+                  <p class="timeline__timeframe">08/08/2022 al 17/09/2022</p>
+                  <h3 class="item-title">cuerpo de agentes de control
+                    metropolitano de Quito</h3>
+                  <h5>radio center
+                  </h5>
+                </div>
+                <div class="timeline__desc">
+                  <p> 160 horas en las Pasantias en el cuerpo de agentes de control
+                    metropolitano de Quito, en el área de centro de
+                    mando y comunicaciones.
+                  </p>
+                </div>
+              </div>
+              <!--apartado que habla acerca de donde estudie todo el colegio antes de acabar en el ITQ -->
+
+            </div>
+            <div class="timeline__block">
+              <div class="timeline__bullet"></div>
+              <div class="timeline__header">
+                <p class="timeline__timeframe">Enero 2019- Diciembre 2023</p>
+                <h3 class="item-title">Academia Aeronautica Mayor Pedro Traversari</h3>
+                <h5>high school</h5>
+              </div>
+              <div class="timeline__desc">
+                <p>En este lugar fue cuando Alexis comenzo a interesarse por la tecnologia con mas seriedad
+                  tenia 3 opciones: mecanico, contador o informatico decidio irse a informatica porque
+                  le llamaba mucho la atencion y queria poderse dedicar en el futuro a un trabajo que no requiera
+                  tanto de un esfuerzo fisico ya que Alexis nunca ha sido una persona que se destaque por su condicion
+                  fisica.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--apartado que habla acerca de el titulo que quiero sacar a futuro -->
+
+        <div class="column large-half tab-full">
+          <div class="timeline">
+            <div class="timeline__icon-wrap">
+              <span class="timeline__icon timeline_icon--education"></span>
+            </div>
+            <div class="timeline__block"> </div>
+            <div class="timeline__bullet">
+              <div class="timeline__header">
+                <p class="timeline__timeframe">Enero 2026 a Enero 2029 </p>
+                <h3 class="item-title">
+                  University Central of Ecuador
+                </h3>
+                <h5> software engineering
+                </h5>
+              </div>
+              <div class="timeline__desc">
+                <p>En un futuro quisiera completar el titulo de tecnologo con una ingenieria que pueda abalar
+                  un poco mas mi conocimiento en el ambito de la informatica Alexis sueña con vivir una vida tranquila
+                  en la que no tenga que sufrirla mas por aquello se esforzara para lograrlo.</p>
+              </div>
+            </div>
+            <!--apartado que habla acerca de donde estudie en la escuela antes de llegar a mi colegio aampetra -->
+
+            <div class="timeline__block">
+              <div class="timeline__bullet"></div>
+              <div class="timeline_header">
+                <p class="timeline__timeframe">November 2008 - May 2018</p>
+                <h3 class="item-title">La salle</h3>
+                <h5>school</h5>
+              </div>
+              <div class="timeline__desc">
+                <p>gran parte de mi infancia fue en la salle una escuela que era bastante completa en cuanto a estudio
+                  daban materias muy buenas entre ellas computacion y aqui empece a amar la tecnologia no me queda nada
+                  mas que agradecer a mis padres por su lucha y permitirme estar aqui.</p>
+              </div>
+            </div>
+
+
+
+
+          </div><!--end about experience-->
+          <!--final de la experiencia laboral que poseo y la vida de estudiante que llevo a dia de hoy-->
+  </section><!-- end s-about-->
+
+  <!--Services
+    ========================================================================================================    -->
+  <section id="services" class="s-services ss-dark target-section">
+    <!-- inicio de mis sueños y pasiones que me mantienen en pie para cumplir lo que me proponga-->
+    <div class="shadow-overlay"></div>
+    <div class="row heading-block heading*block--center">
+      <div class="column large-full">
+        <h2 class="section-heading section-heading--centerbottom">Capabilities/ Habilidades</h2>
+        <p class="section-desc">
+          mi pasion y mi sueño es ayudar a mi familia en lo que mas pueda
+          que nunca mas nadie la pase mal y por fin tener una vida estable economicamente y siempre tener
+          a mi familia a mi lado que son lo que mas feliz me hacen y ademas quisiera viajar a japon
+        </p>
+      </div>
+    </div><!--end heading-block--> <!--final de los sueños y pasiones de alexis arcos-->
+    <!--empezamos a hablar acerca de las habilidades que Alexis posee que podrian llegar a ser utiles en el ambito laboral--> 
+    <div class="row services-list block-large-1-3 block-medium-1-2 block-tab-full">
+      <div class="column item-service">
+        <div class="item-service__content">
+          <h4 class="item-title">Eloquence</h4> <!--primera habilidad-->
+          <p>
+            Alexis Xavier Arcos tiene una destacada facilidad de palabra, lo que le permite expresarse con claridad,
+            fluidez y persuasión en diversas situaciones comunicativas.
+            Gracias a esta habilidad, Alexis puede transmitir ideas de manera efectiva,
+            captar la atención de su audiencia y adaptarse al tono y estilo adecuado según el contexto.
+            Esto le hace destacar en presentaciones, negociaciones, ventas u otras interacciones sociales,
+            facilitando la comprensión y el impacto de sus mensajes.
+          </p>
+        </div>
+
+      </div>
+<!-- fin primera habilidad-->
+
+      <div class="column item-service">
+        <div class="item-services__content">
+          <h4 class="item-title">Graphic Design.</h4> <!--segunda habilidad-->
+
+          <p>
+            Alexis Xavier Arcos también posee una gran habilidad en diseño gráfico,
+            lo que le permite combinar creatividad y técnicas visuales
+            para transmitir mensajes de manera efectiva a través de imágenes,
+            tipografías y colores. Gracias a su dominio en esta área,
+            Alexis puede crear diseños atractivos y funcionales, adaptados a diferentes contextos y necesidades,
+            como publicidad, branding y contenido digital.
+            Su capacidad para interpretar ideas y transformarlas en composiciones visuales
+            impactantes lo convierte en un recurso valioso en cualquier proyecto de comunicación visual.
+          </p>
+        </div>
+      </div>
+<!-- fin segunda habilidad-->
+      <div class="column item-service" data-aos="fade-up">
+        <div class="item-service__content">
+          <h4 class="item-title">Autodidact</h4> <!--tercera habilidad-->
+          <p>
+            Alexis Xavier Arcos es un autodidacta,
+            lo que significa que posee la capacidad de aprender de manera independiente
+            sin necesidad de instrucción formal. Esta habilidad le permite adquirir conocimientos
+            y desarrollar nuevas destrezas a través de la investigación, la práctica y la autoenseñanza.
+            Alexis es capaz de explorar diferentes fuentes de información,
+            identificar lo que necesita aprender y aplicarlo de manera efectiva en sus proyectos.
+            Su enfoque autodidacta lo convierte en una persona proactiva y versátil,
+            capaz de adaptarse rápidamente a nuevos retos y conocimientos.
+          </p>
+        </div>
+      </div>
+      <!-- fin tercera habilidad-->
+      <div class="column item-service" data-aos="fade-up">
+        <div class="item-service__content">
+          <h4 class="item-title"> Computer Repair</h4> <!--cuarta habilidad-->
+          <p>
+            Alexis Xavier Arcos tiene una gran habilidad en arreglar computadoras,
+            lo que le permite diagnosticar y solucionar problemas técnicos relacionados con hardware,
+            software y sistemas operativos. Gracias a su conocimiento en esta área,
+            Alexis es capaz de identificar fallos, realizar reparaciones y optimizar el funcionamiento
+            de los equipos. Su capacidad para resolver problemas técnicos lo convierte en un recurso valioso,
+            ya sea en el mantenimiento preventivo o en la resolución de problemas críticos
+            en sistemas informáticos.
+          </p>
+        </div>
+      </div>
+ <!-- fin cuarta habilidad-->
+      <div class="column item-service" data-aos="fade-up">
+        <div class="item-service__content">
+          <h4 class="item-title">Empathy</h4> <!--quinta habilidad-->
+          <p>
+            Alexis Xavier Arcos posee una notable habilidad de empatía,
+            lo que le permite comprender y conectarse con las emociones y perspectivas de los demás.
+            Esta capacidad le facilita establecer relaciones interpersonales sólidas,
+            mejorar la comunicación y colaborar de manera efectiva en entornos de trabajo o
+            situaciones sociales. Gracias a su empatía, Alexis puede abordar conflictos de manera sensible
+            y crear un ambiente de confianza y respeto, siendo un recurso clave en equipos
+            que valoran la cooperación y el apoyo mutuo.
+          </p>
+        </div>
+      </div><!-- end services-list-->
+    </div><!--en s-services-->
+ <!-- fin quinta habilidad-->
+   <!-- con esto cerramos el apartado de las habilidades de alexis -->
+  </section>
+
+
 
 </body>
+ <!-- final de el curriculum vitae-->
 </html>

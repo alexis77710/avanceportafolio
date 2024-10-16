@@ -155,3 +155,851 @@ h5, .h5, h6, .h6{
     display: block;
     line-height: calc(78px -(18px*2));
 }
+.header-main-nav {
+    /*cambia la fuente de la letra*/
+    font-family: "Roboto", sans-serif;
+     /*cambia el tamaño de la letra*/
+    font-size: 13px;
+    /*pone la letra en mayuscula*/
+    text-transform: uppercase;
+     /*el espacio que hay de letra a letra*/
+    letter-spacing: 0.3rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 0 4px;
+     /*pone todo en z*/
+    z-index: 2;
+    position: static;
+}
+
+.header-main-nav li {
+    margin: 0 2rem;
+}
+
+.header-main-nav a {
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.header-main-nav a:hover,
+.header-main-nav a:focus,
+.header-main-nav a:active {
+    color: #ffffff;
+}
+
+.header-main-nav .current a {
+    color: #ffffff;
+}
+ /*editamos el apartado del header solo de redes sociales*/
+.header-social {
+    font-size: 2rem;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 40px;
+}
+
+.header-social li {
+    margin-right: 1rem;
+}
+
+.header-social li:last-child {
+    margin-right: 0;
+}
+
+.header-social li a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/*----------------------------------------------------------------------------------------
+* # menu trigger
+*-----------------------------------------------------------------------------------------*/
+.header-menu-toggle {
+    display: none;
+    height: 42px;
+    width: 42px;
+    line-height: 42px;
+    font-family: "Lora", serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: rgba(255, 255, 255, 0.5); /* Color inicial del texto */
+    transition: all .3s;
+    position: absolute;
+    right: 32px;
+    top: 18px;
+}
+
+.header-menu-toggle:hover,
+.header-menu-toggle:focus {
+    color: #ffffff;
+}
+/* ------------------------------
+ * Líneas del botón de menú (hamburguesa)
+ * ------------------------------ */
+.header-menu-toggle span {
+     /* Crea las líneas de la "hamburguesa" */
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin-top: -1px;
+    background-color: #ffffff;
+    transition: all .5s;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    right: auto;
+    bottom: auto;
+}
+/* Líneas antes y después de la principal (las de arriba y abajo) */
+
+.header-menu-toggle span::before,
+.header-menu-toggle span::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    left: 0;
+    transition: all .5s;
+}
+
+.header-menu-toggle span::before {  /* Línea superior */
+    top: -9px;
+}
+
+.header-menu-toggle span::after {  /* Línea inferior */
+    bottom: -9px;
+}
+/* Estado del botón cuando es clickeado (X en lugar de hamburguesa) */
+
+.header-menu-toggle.is-clicked span {
+    background-color: rgba(255, 255, 255, 0); /* Hace la línea central invisible */
+    transition: all .1s;
+}
+
+.header-menu-toggle.is-clicked span::before,
+.header-menu-toggle.is-clicked span::after {
+    background-color: white;
+}
+
+.header-menu-toggle.is-clicked span::before {
+    top: 0;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.header-menu-toggle.is-clicked span::after {
+    bottom: 0;
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+/* ------------------------------
+ * Media Queries: Ajustes responsivos
+ * ------------------------------ */
+/* Cambia el tamaño de fuente del menú en pantallas medianas */
+
+@media screen and (max-width:1200px) {
+    .header-main-nav {
+        font-size: 12px;
+    }
+
+    .header-main-nav li {
+        margin: 0 1.4rem;
+    }
+
+}
+/* Ajustes adicionales para pantallas más pequeñas */
+
+@media screen and (max-width:1000px) {
+    .s-header {
+        text-align: right; /* Alinea el header a la derecha */
+    }
+
+    .header-nav-wrap {
+        margin-right: 36px;
+    }
+
+    .header-nav-wrap .header-social {
+        display: none;
+    }
+}
+/* Menú oculto en pantallas pequeñas y botón de menú visible */
+
+@media screen and (max-width:800px) {
+    .s-header {
+        background-color: #050505;
+        position: fixed;
+        top: 0;
+    }
+
+    .header-logo img {
+        width: 128px;
+        height: 30px;
+    }
+
+    .header-nav-wrap {
+        display: none;
+        text-align: left;
+        height: auto;
+        width: 100%;
+        background-color: #050505;
+        padding: 120px 44px 64px;
+
+    }
+
+    .header-nav-wrap .header-main-nav {
+        display: block;
+        padding-left: 0;
+        height: auto;
+        margin: 0 0 4rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header-nav-wrap .header-main-nav li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header-nav-wrap .header-main-nav li a {
+        padding: 18px 0;
+        line-height: 20px;
+    }
+
+    .header-nav-wrap .header-social {
+        display: block;
+        position: static;
+
+    }
+
+    .header-nav-wrap .header-social li {
+        font-size: 1.8rem;
+        margin-right: 1.6rem;
+    }
+
+    .header-nav-wrap .header-social li a {
+        line-height: 36px;
+    }
+
+    .header-menu-toggle {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .header-logo {
+        left: 35px;
+    }
+
+}
+
+/*--------------------------------------------------------------------------------------------
+  * hacer que el menu sea visible en una pantalla larga
+  ---------------------------------------------------------------------------------------------*/
+@media only screen and (min-width:801px) {
+    .header-nav-wrap {
+        display: block !important;
+    }
+}
+
+/* ------------------------------
+ * Sección de introducción
+ * ------------------------------ */
+.s-intro {
+    width: 100%;
+    height: 100vh;  /* Ocupa toda la altura de la pantalla */
+    min-height: 792px;
+    background-color: #050505;
+}
+
+.intro-content {
+    height: 100%;
+    max-width: 1140px;
+    padding-top: 20vh;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+/* Imagen de fondo en la sección de introducción */
+
+.intro-pic {
+    background-color: #02182c;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url(../img/hero-pic.jpg);  /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre toda el área */
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+}
+
+.intro-pic::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: .2;
+}
+
+.intro-grid {
+    background-image: url(../img/pattern-dot-grid.svg);
+    background-size: 24px 24px;
+    opacity: .15;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    bottom: 0;
+    left: 30%;
+}
+
+.intro-text {
+    -webkit-transform: translate3d(0, -3.6rem, 0);
+    transform: translate3d(0, -3.6rem, 0);
+    position: static;
+    z-index: 1;
+}
+
+.intro-text h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.333;
+    color: #cf1767;
+    margin-top: 0;
+}
+/* ------------------------------
+ * Ajustes de texto en la introducción
+ * ------------------------------ */
+.intro-text h1 {
+    font-size: 7.8rem;
+    font-weight: 500;
+    line-height: 1.179;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.intro-scroll {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 2;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    position: absolute;
+    bottom: 8rem;
+    left: 24px;
+    z-index: 1;
+}
+
+.intro-scroll a {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.3);
+    position: relative;
+    padding-right: 8.8rem;
+}
+
+.intro-scroll a::after {
+    content: ""; /* Línea decorativa junto al enlace de scroll */
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 1px;
+    width: 72px;
+    background-color: #cf1767;
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * intro (Ajustes para la sección de introducción según el tamaño de pantalla)
+ * ------------------------------------------------------------------- */
+@media screen and (max-width:1400px) {
+    .intro-text h3 {
+        font-size: 2.2rem;  /* Reduce el tamaño del subtítulo */
+    }
+
+    .intro-text h1 {
+        font-size: 7.2rem;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+    .intro-content {
+        max-width: 1000px; /* Ajusta el ancho máximo del contenido */
+    }
+
+    .intro-text h3 {
+        font-size: 2rem;
+    }
+
+    .intro-text h1 {
+        font-size: 7rem;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .s-intro {
+        max-height: 800px; /* Limita la altura máxima de la sección de introducción */
+    }
+
+    .intro-text h1 {
+        font-size: 6.2rem; /* Continúa ajustando el tamaño del título */
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .intro-text h1 {
+        font-size: 6rem; 
+    }
+
+    .intro-text br {
+        display: none; /* Elimina el salto de línea en pantallas más pequeñas */
+    } 
+
+}
+
+@media screen and (max-width:800px) {
+    .intro-content {
+        width: 88%;
+        padding-top: 8rem;
+    }
+
+    .intro-pic {
+        top: 12%;
+        left: 40%; /* Cambia su alineación horizontal */
+    } 
+
+    .intro-pic::before {
+        opacity: .4; /* Aumenta la transparencia de la imagen */
+    }
+
+    .intro-grid {
+        top: 20%; /* Cambia la posición*/
+        opacity: .1; /* Reduce la opacidad*/
+    }
+
+    .intro-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .intro-text h1 {
+        font-size: 5.6rem;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .intro-text h1 {
+        font-size: 5rem;
+    }
+
+    .intro-pic {
+        left: 30%;
+    }
+
+    .intro-grid {
+        left: 15%;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .s-intro {
+        max-height: none; /* Elimina la restricción de altura máxima */
+    }
+
+    .intro-content {
+        width: auto;
+    }
+
+    .intro-pic {
+        left: 20%;
+    }
+
+    .intro-grid {
+        left: 10%;
+    }
+
+    .intro-text {
+        -webkit-transform: translate3d(0, -4.8rem, 0);  /* Ajusta la posición del texto */
+        transform: translate3d(0, -4.8rem, 0);
+    }
+
+    .intro-text h1 {
+        font-size: 4.8rem; /* Disminuye el tamaño del título */
+    }
+
+    .intro-scroll {
+        font-size: 1.1rem;
+        left: 30px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .s-intro {
+        min-height: 656px;
+    }
+
+    .intro-text h1 {
+        font-size: 4.5rem; /* Ajusta el tamaño del título para pantallas muy pequeñas */
+    }
+
+}
+
+@media screen and (max-width:350px) {
+    .intro-text h1 {
+        font-size: 4.2rem;
+    }
+
+}
+
+/* ------------------------------
+ * Sección "Acerca de"
+ * ------------------------------ */
+.s-about {
+    padding-top: 19.2rem;  /* Gran espacio superior */
+    padding-bottom: 16.8rem;
+    background-color: #ffffff;  /* fondo blanco */
+}
+
+.s-about .row {
+    max-width: 1140px;
+}
+
+.s-about>[class*="about-"] {
+    margin-bottom: 15.2rem;
+}
+
+.s-about>[class*="about-"]:last-child {
+    margin-bottom: 0;  /* Elimina el margen en la última sección */
+}
+/* Texto con dos columnas */
+
+.about-me__text {
+    -webkit-columns: 2 360px;
+    -moz-columns: 2 360px;
+    columns: 2 360px; /* Dos columnas con 360px de ancho cada una */
+    column-gap: 64px; /* Espacio entre columnas */
+}
+
+.about-me__buttons {
+    margin-top: 4.8rem; /* Espacio superior para los botones */
+}
+
+.about-me__buttons .column:first-child {
+    padding-right: 32px; /* Espaciado a la derecha para el primer botón */
+}
+
+.about-me__buttons .column:last-child {
+    padding-left: 32px;
+}
+
+/* -------------------------------------------------------------------
+   * ## timeline
+   * ------------------------------------------------------------------- */
+.about-experience__timeline {
+    margin-top: 1.6rem;
+}
+
+.about-experience__timeline .column:first-child {
+    padding-right: 40px;
+}
+
+.about-experience__timeline .column:last-child {
+    padding-left: 40px;
+}
+
+.timeline {
+    padding-top: 4.8rem; /* Espacio superior para la línea de tiempo */
+    position: relative; /* Posicionamiento relativo para los elementos dentro */
+}
+
+.timeline::before {
+    content: ""; /* Línea vertical antes de los elementos */
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.12);  /* Color semitransparente */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.timeline::after {
+    content: "";
+    display: block;
+    width: 5.6rem;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.12);
+    position: absolute;
+    left: 1px;
+    top: 0;
+}
+
+.timeline__icon-wrap {
+    display: block;
+    width: 6rem; /* Tamaño del contenedor circular del ícono */
+    height: 6rem;
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: -2.2rem;
+    left: 5.6rem;
+}
+
+.timeline__icon {
+    display: block;
+    width: 2.5rem; /* Tamaño del ícono dentro del círculo */
+    height: 2.5rem;
+    background-repeat: no-repeat; /* No repite la imagen del ícono */
+    background-position: center center; /* Centra el ícono dentro del círculo */
+    background-size: contain; /* Ajusta el ícono para que quepa en el contenedor */
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+/* Íconos específicos para cada tipo de entrada */
+.timeline__icon--work {
+    background-image: url(../img/icons/icon-briefcase.svg);
+}
+
+.timeline__icon--education {
+    background-image: url(../img/icons/icon-education.svg);
+}
+
+.timeline__block {
+    position: relative;
+    padding-left: 5.6rem;
+    padding-bottom: .8rem;
+    margin-top: 2.8rem;  /* Separación entre bloques de timeline */
+    min-height: 35.6rem;
+}
+
+.timeline .timeline__block:last-child {
+    padding-bottom: 0;
+}
+
+.timeline__bullet {
+    content: ""; /* Línea que conecta el ícono con el bloque */
+    display: block;
+    width: 3px;
+    height: 4.8rem;
+    background-color: #000000;
+    position: absolute;
+    left: -1px;
+    top: 8px;
+}
+
+.timeline__header {
+    margin-bottom: 3.2rem;  /* Espacio inferior del encabezado de la timeline */
+}
+
+.timeline__header .timeline__timeframe,
+.timeline__header h5 {
+    font-family: "Roboto", sans-serif;
+}
+
+.timeline__header .timeline__timeframe {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.714;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin-bottom: .8rem;
+    color: #000000;
+}
+
+.timeline__header h3 {
+    margin-bottom: 0;
+}
+
+.timeline__header h5 {
+    font-size: 2.1rem;
+    font-weight: 400;
+    line-height: 1.333;
+    margin-top: 0;
+}
+
+/* ------------------------------------------------------------------- 
+   * responsive: about (Ajustes para la sección "Acerca de" en pantallas pequeñas)
+   * ------------------------------------------------------------------- */
+@media screen and (max-width:1200px) {
+    .s-about {
+        padding-top: 17.2rem; /* Disminuye el espacio superior */
+        padding-bottom: 15.6rem;  /* Disminuye el espacio inferior */
+    }
+
+    .about-experience__timeline .column:first-child {
+        padding-right: 30px; /* Reduce el espaciado de la primera columna */
+    }
+
+    .about-experience__timeline .column::last-child {
+        padding-left: 30px;
+    }
+
+    .timeline::after {
+        width: 4.4rem;
+    }
+
+    .timeline__icon-wrap {
+        left: 4.4rem;
+    }
+
+    .timeline__block {
+        padding-left: 4.4rem;
+    }
+
+    .timeline__header h5 {
+        font-size: 1.8rem;
+    }
+
+}
+ /* Ajusta el espaciado de la última columna */
+@media screen and (max-width:1024px) {
+    .about-me__text {
+        column-gap: 40px;
+    }
+
+    .about-me__buttons .column:first-child {
+        padding-right: 20px;
+    }
+
+    .about-me__buttons .column:last-child {
+        padding-left: 20px;
+    }
+
+    .about-experience__timeline .column:first-child {
+        padding-right: 16px;
+    }
+
+    .about-experience__timeline .column:last-child {
+        padding-left: 16px;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    .s-about .row {
+        max-width: 700px;
+    }
+
+    .about-me__buttons .column:first-child {
+        padding-right: 16px;
+    }
+
+    .about-me__buttons .column:last-child {
+        padding-left: 16px;
+    }
+
+    .about-experience__timeline .column {
+        -webkit-flex: 0 0 100%; /* Flexbox: toma todo el ancho disponible */
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;  /* Cada columna ocupa el 100% del ancho */
+    }
+
+    .about-experience__timeline .column:first-child {
+        margin-bottom: 9.6rem;
+    }
+
+    .timeline::after {
+        width: 5.6rem;
+    }
+
+    .timeline__icon-wrap {
+        left: 5.6rem;
+    }
+
+    .timeline__block {
+        min-height: 0;
+        padding-left: 5.6rem;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    .s-about {
+        padding-top: 16rem;
+    }
+
+    .s-about .row {
+        max-width: 600px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    .about-me__buttons .column:first-child,
+    .about-experience__timeline .column:first-child {
+        padding-right: 10px; /* Reduce el padding en la primera columna */
+    }
+
+    .about-me__buttons .column:last-child,
+    .about-experience__timeline .column:last-child {
+        padding-left: 10px; /* Reduce el padding en la última columna */
+    }
+
+    .timeline::after {
+        width: 4.4rem;
+    }
+
+    .timeline__icon-wrap {
+        left: 4.4rem;
+    }
+
+    .timeline__block {
+        padding-left: 4.4rem;
+    }
+
+    .timeline__header h5 {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .s-about>[class*="about-"] { 
+        margin-bottom: 14rem; /* Reduce el espacio inferior entre elementos "about" */
+    }
+
+    .about-me__buttons .column:first-child,
+    .about-experience__timeline .column:first-child {
+        padding-right: 0;
+    }
+
+    .about-me__buttons .column:last-child,
+    .about-experience__timeline .column:last-child {
+        padding-left: 0;
+    }
+
+    .timeline::after {
+        width: 2.8rem;
+    }
+
+    .timeline__icon-wrap {
+        left: 2.8rem;
+    }
+
+    .timeline__block {
+        padding-left: 2.8rem;
+    }
+
+}
